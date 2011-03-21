@@ -1,0 +1,6 @@
+
+#ifdef _MSC_VER
+#pragma pack()
+#else
+#pragma pack(0)   
+#endif
