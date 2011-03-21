@@ -113,6 +113,7 @@ FIXTURE(s_snprintf_test)
 
 	TEST(s_snprintf能处理带参数的情况)
 	{
+		memset(to, 0, sizeof(to));
 		s_snprintf(to, sizeof(to), "12%d%d",3, 4);
 		ASSERT_SAME_DATA(expected, to, length);
 	}
