@@ -1,4 +1,5 @@
+//lint -esym(766, *pack_1, *unpack)  Info 766: Header file '..\include\cpputils\pack_1' not used in module
 #ifdef _MSC_VER
-#pragma warning(disable: 4103)
+#pragma warning(disable: 4103)  // 损失了头文件中应该关闭pack的检查功能, gnu暂时没发现告警
 #endif
 #pragma pack(1)

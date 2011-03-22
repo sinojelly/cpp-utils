@@ -1,0 +1,11 @@
+
+-e686  // Warning 686: Option '-elib(*)' is suspicious because of
+              //    'blanket suppression can hide configuration problems'
+-elib(*)
+	   
+-d_MSC_VER=1300
+-d_WIN32
+-d__STDC__
++e900
+
+-i"C:\Program Files\Microsoft Visual Studio 8\VC\include"

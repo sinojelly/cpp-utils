@@ -8,10 +8,9 @@
 using namespace std;
 
 
-// TODO: ´ý²âÊÔ
 inline const char *file_name(const char *file)
 {
-    for (int i = strlen(file) - 1; i >= 0; i--)
+    for (int i = (int)strlen(file) - 1; i >= 0; i--)
 	{
 	    if ((file[i] == '\\') || (file[i] == '/'))
 		{

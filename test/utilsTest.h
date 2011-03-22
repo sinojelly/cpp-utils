@@ -92,25 +92,6 @@ FIXTURE(s_snprintf_test)
 
 	}
 
-	TEST(如果给的长度参数未预留1个字节，snprintf会导致写结束符时越界) // can not test because of uncaughtable exception
-	{
-		expected[3] = 0;
-
-		//sprintf_s(to, 3, from);  // vc: exception
-		//snprintf(to, 3, from);  
-
-		//ASSERT_SAME_DATA(expected, to, length);
-	}
-
-	TEST(无须人为预留1个字节，s_snprintf都不会导致越界) // can not test because of uncaughtable exception
-	{
-		expected[2] = 0;
-
-		//s_snprintf(to, 3, from);  // VC下只要to空间不够，都会抛出异常，无法测试
-
-		//ASSERT_SAME_DATA(expected, to, length);
-	}
-
 	TEST(s_snprintf能处理带参数的情况)
 	{
 		memset(to, 0, sizeof(to));
@@ -278,3 +259,4 @@ FIXTURE(unref_test)
 		UNREF(foo(10));
 	}
 };
+

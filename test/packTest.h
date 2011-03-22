@@ -33,7 +33,7 @@ FIXTURE(pack_test)
 
 	TEST(默认pack应该为4)
 	{
-		ASSERT_EQ(8, sizeof(A)); 
+		ASSERT_EQ(8, (unsigned int)sizeof(A)); 
 	}
 
 	TEST(指定pack 1之后，结构体为7字节)
