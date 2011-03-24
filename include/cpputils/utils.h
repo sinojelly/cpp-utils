@@ -13,8 +13,8 @@
 #define s_snprintf(to, size, from, ...)  snprintf(to, size /*- 1*/, from, ##__VA_ARGS__)  // gnu already reserved one byte for '\0'.
 #endif
 
-//lint -emacro(506, s_malloc, s_devide, s_mode)  Warning 506: Constant value Boolean
-//lint -emacro(774, s_malloc, s_new, s_devide, s_mode)  Info 774: Boolean within 'if' always evaluates to False
+//lint -emacro(506, s_malloc, s_div, s_mod)  Warning 506: Constant value Boolean
+//lint -emacro(774, s_malloc, s_new, s_div, s_mod)  Info 774: Boolean within 'if' always evaluates to False
 // 安全的malloc函数：如果p为空或者入参长度<=0，则执行execute(一般会return)
 #define s_malloc(type, p, size, execute) \
 { \
@@ -50,13 +50,13 @@
     p = NULL; \
 }
 
-#define s_devide(result, a, b, execute) \
+#define s_div(result, a, b, execute) \
 { \
     if ((b) == 0) { execute; } \
     result = a / b; \
 }
 
-#define s_mode(result, a, b, execute) \
+#define s_mod(result, a, b, execute) \
 { \
     if ((b) == 0) { execute; } \
     result = a % b; \

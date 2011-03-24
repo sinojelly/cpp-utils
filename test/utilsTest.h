@@ -193,7 +193,7 @@ FIXTURE(s_new_delete_test)
 	}
 };
 
-FIXTURE(s_devide_mode_test)
+FIXTURE(s_div_mod_test)
 {
 	int expect, result, a, b;
 
@@ -204,33 +204,33 @@ FIXTURE(s_devide_mode_test)
 		expect = 10;
 	}
 
-	TEST(s_devide被除数非0，应该正确执行)
+	TEST(s_div被除数非0，应该正确执行)
 	{
-		s_devide(result, a, b, FAIL("should not come here."));
+		s_div(result, a, b, FAIL("should not come here."));
 		ASSERT_EQ(expect, result);
 	}
 
-	TEST(s_devide被除数为0，应该执行execute语句)
+	TEST(s_div被除数为0，应该执行execute语句)
 	{
 		b = 0;
 
-		s_devide(result, a, b, return);
+		s_div(result, a, b, return);
 
 		FAIL("should not come here.");
 	}
 
-	TEST(s_mode被除数非0，应该正确执行)
+	TEST(s_mod被除数非0，应该正确执行)
 	{
 		expect = 0;
-		s_mode(result, a, b, FAIL("should not come here."));
+		s_mod(result, a, b, FAIL("should not come here."));
 		ASSERT_EQ(expect, result);
 	}
 
-	TEST(s_mode被除数为0，应该执行execute语句)
+	TEST(s_mod被除数为0，应该执行execute语句)
 	{
 		b = 0;
 
-		s_mode(result, a, b, return);
+		s_mod(result, a, b, return);
 
 		FAIL("should not come here.");
 	}

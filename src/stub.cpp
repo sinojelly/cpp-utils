@@ -60,28 +60,28 @@ void lint_s_new_dummy()
 }
 
 //lint -e550 Warning 550: Symbol 'r' (line 57) not accessed
-void lint_s_devide()
+void lint_s_div()
 {
     double r,b = 2;
-    s_devide(r, 3.0, b, return);
+    s_div(r, 3.0, b, return);
 }
 
-void lint_s_devide_2()
+void lint_s_div_2()
 {
     double r, b = 0;
-    s_devide(r, 3.0, b, return);
+    s_div(r, 3.0, b, return);
 }
 
-void lint_s_mode()
+void lint_s_mod()
 {
     int r;
-    s_mode(r, 3, 2, return);
+    s_mod(r, 3, 2, return);
 }
 
-void lint_s_mode_2()
+void lint_s_mod_2()
 {
     int r, b = 0;
-    s_mode(r, 3, b, return);
+    s_mod(r, 3, b, return);
 }
 
 void lint_array_size()
