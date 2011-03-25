@@ -53,13 +53,13 @@
 #define s_div(result, a, b, execute) \
 { \
     if ((b) == 0) { execute; } \
-    result = a / b; \
+    result = (a) / (b); \
 }
 
 #define s_mod(result, a, b, execute) \
 { \
     if ((b) == 0) { execute; } \
-    result = a % b; \
+    result = (a) % (b); \
 }
  
 
